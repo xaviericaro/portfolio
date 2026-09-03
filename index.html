@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ícaro Xavier -- Portfólio</title>
+<meta name="description" content="Portfólio do Ícaro Xavier, desenvolvedor de software em Belo Horizonte. APIs, dados e interfaces.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <p class="preloader-text">
+      <span class="pl-name" id="plName"><span class="pl-word">
+        <span class="pl-l" style="animation-delay:.10s">Í</span><span class="pl-l" style="animation-delay:.15s">c</span><span class="pl-l" style="animation-delay:.20s">a</span><span class="pl-l" style="animation-delay:.25s">r</span><span class="pl-l" style="animation-delay:.30s">o</span></span><span class="pl-word">
+        <span class="pl-l" style="animation-delay:.38s">X</span><span class="pl-l" style="animation-delay:.43s">a</span><span class="pl-l" style="animation-delay:.48s">v</span><span class="pl-l" style="animation-delay:.53s">i</span><span class="pl-l" style="animation-delay:.58s">e</span><span class="pl-l" style="animation-delay:.63s">r</span></span></span><span class="pl-dot" id="plDot">.</span>
+    </p>
+    <div class="preloader-bar">
+      <div class="preloader-bar-fill" id="plBarFill"></div>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#inicio" class="logo">Xavier<span class="logo-dot" id="logoDot">.</span></a>
+
+    <nav class="nav" id="siteNav">
+      <a href="#inicio">Início</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section id="inicio" class="hero">
+    <div class="hero-decor" aria-hidden="true">
+      <span class="ring ring-a"></span>
+      <span class="ring ring-b"></span>
+      <span class="blob"></span>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-kicker fade-item">Desenvolvedor de software</p>
+      <h1 class="hero-name fade-item">Ícaro Xavier</h1>
+      <p class="hero-role fade-item">Construindo produtos de ponta a ponta, de APIs a interfaces.</p>
+      <p class="hero-desc fade-item">
+        Trabalho com backend, front-end e dados, construindo APIs, interfaces e modelos de machine learning em projetos próprios, do zero até o funcionamento.
+      </p>
+      <div class="hero-actions fade-item">
+        <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+        <a href="#contato" class="btn btn-ghost">Falar comigo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projetos" class="projects reveal">
+    <div class="section-head">
+      <h2>Projetos</h2>
+      <p>Uma seleção do que venho construindo — de APIs a modelos de machine learning.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-media tone-1">
+          <!-- Adicione a capa em assets/projetos/ e atualize o nome do arquivo abaixo. -->
+          <img class="project-cover" src="assets/projetos/cadim.jpg" alt="Capa do projeto Cadim">
+          <span class="project-tag">API · Python</span>
+        </div>
+        <div class="project-body">
+          <h3>Cadim</h3>
+          <p>API REST de controle financeiro pessoal — FastAPI, SQLAlchemy e SQLite, com CRUD completo e testes automatizados em pytest.</p>
+          <a href="https://github.com/xaviericaro/Cadim-Controle-Financeiro" class="project-link">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media tone-2">
+          <img class="project-cover" src="assets/projetos/rubao-barber.jpg" alt="Capa do projeto Rubão Barber">
+          <span class="project-tag">Front-end · Site</span>
+        </div>
+        <div class="project-body">
+          <h3>Rubão Barber</h3>
+          <p>Site para uma barbearia real, com animações de rolagem e identidade visual própria — em constante evolução.</p>
+          <a href="https://rubaobarber.netlify.app" class="project-link">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media tone-3">
+          <img class="project-cover" src="assets/projetos/deteccao-fraudes.jpg" alt="Capa do projeto Detecção de Fraudes">
+          <span class="project-tag">Dados · Machine Learning</span>
+        </div>
+        <div class="project-body">
+          <h3>Detecção de Fraudes</h3>
+          <p>Modelo de classificação para transações de cartão de crédito — EDA, SMOTE, Random Forest, XGBoost e explicabilidade com SHAP.</p>
+          <a href="https://github.com/xaviericaro/deteccao-fraudes-cartao-credito" class="project-link">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media tone-4">
+          <img class="project-cover" src="assets/projetos/fluxfare.jpg" alt="Capa do projeto Calculadora de Corrida">
+          <span class="project-tag">JavaScript · APIs</span>
+        </div>
+        <div class="project-body">
+          <h3>Calculadora de Corrida</h3>
+          <p>Estimador de preço de corrida usando geolocalização, rotas e clima em tempo real, integrando três APIs públicas.</p>
+          <a href="https://github.com/xaviericaro/simulador_precificacao" class="project-link">Ver detalhes</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media tone-5">
+          <img class="project-cover" src="assets/projetos/base-brasileirao.jpg" alt="Capa do projeto Base do Brasileirão">
+          <span class="project-tag">SQL · Dados esportivos</span>
+        </div>
+        <div class="project-body">
+          <h3>Base do Brasileirão</h3>
+          <p>Modelagem de um banco SQLite normalizado a partir de dados públicos do Campeonato Brasileiro.</p>
+          <a href="#" class="project-link">Ver detalhes</a>
+        </div>
+      </article>
+
+      <!-- Novos projetos: duplique este article para adicionar mais itens ocultos. -->
+      <article class="project-card project-card-extra">
+        <div class="project-media tone-1">
+          <img class="project-cover" src="assets/projetos/abnt-oneclick.png" alt="Capa do projeto ABNT OneClick">
+          <span class="project-tag">Ferramenta · Produtividade</span>
+        </div>
+        <div class="project-body">
+          <h3>ABNT OneClick</h3>
+          <p>Ferramenta para simplificar a formatação de trabalhos acadêmicos conforme as normas ABNT.</p>
+          <a href="#" class="project-link">Ver detalhes</a>
+        </div>
+      </article>
+
+    </div>
+    <div class="projects-more">
+      <button class="btn btn-ghost" id="showAllProjects" type="button" aria-expanded="false">Ver todos os projetos</button>
+    </div>
+  </section>
+
+  <section id="sobre" class="about reveal">
+    <div class="about-photo">
+      <div class="photo-frame">
+        <img src="assets/icaro-perfil.jpg" alt="Ícaro Xavier">
+      </div>
+    </div>
+
+    <div class="about-text">
+      <h2>Sobre</h2>
+      <p>
+        Estou construindo minha trajetória em desenvolvimento de software um projeto de cada vez, passando por backend, front-end e dados, sempre com atenção a organização e detalhe em cada etapa.
+      </p>
+      <ul class="about-facts">
+        <li><span>Local</span>Belo Horizonte - MG, Brasil</li>
+        <li><span>Foco atual</span>Backend, dados e interfaces</li>
+        <li><span>Aprendendo</span>Um projeto de cada vez, na prática</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contato" class="contact reveal">
+    <div class="contact-intro">
+      <h2>Contato</h2>
+      <p>Aberto a conversas sobre projetos, freelas ou oportunidades de estágio.</p>
+
+      <ul class="social-list">
+        <li><a href="mailto:icaromiguelmartinzsantos@gmail.com">Email</a></li>
+        <li><a href="https://github.com/xaviericaro" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ícaroxavier/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://instagram.com/oxavier__" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/maeyoqgo" method="POST">
+      <label>
+        Nome
+        <input type="text" name="nome" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Mensagem
+        <textarea name="mensagem" rows="4" required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+      <p class="form-note" id="formNote" role="status"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Ícaro Xavier — © 2026. Feito com HTML, CSS, JavaScript e Cloud.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
