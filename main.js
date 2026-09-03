@@ -57,9 +57,6 @@
   }, 3450);
 })();
 
-// Bloco do avatar (olhos seguindo o cursor) removido por enquanto —
-// será reintroduzido quando o personagem for retomado.
-
 const header = document.getElementById('siteHeader');
 const onScroll = () => {
   header.classList.toggle('is-scrolled', window.scrollY > 12);
