@@ -352,6 +352,29 @@ img{ max-width: 100%; display:block; }
   font-size: 0.9rem;
   color: var(--ink-soft);
   margin-bottom: 18px;
+  line-height: 1.3;
+}
+.kicker-rotator{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 1.3em;
+  vertical-align: top;
+}
+.kicker-word{
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform .45s var(--ease), opacity .4s var(--ease);
+}
+.kicker-word.is-out{
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.kicker-word.is-in-start{
+  transition: none;
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .hero-name{
@@ -389,7 +412,6 @@ img{ max-width: 100%; display:block; }
 body.is-ready .fade-item{
   animation: fade-up var(--dur-slow) var(--ease) forwards;
 }
-.hero-kicker{ animation-delay: .05s; }
 .hero-name{ animation-delay: .15s; }
 .hero-role{ animation-delay: .3s; }
 .hero-desc{ animation-delay: .42s; }
@@ -768,5 +790,10 @@ body.is-ready .fade-item{
     transform: none !important;
     animation: none !important;
     transition: none !important;
+  }
+  .kicker-word{
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
 }

@@ -7,11 +7,37 @@
   const body = document.body;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  const startKickerRotator = () => {
+    const el = document.getElementById('kickerWord');
+    if (!el) return;
+
+    const words = ['Código', 'Aprendizado', 'Evolução contínua.'];
+
+    if (reduceMotion) {
+      el.textContent = 'Código, aprendizado e evolução contínua.';
+      return;
+    }
+
+    let index = 0;
+    setInterval(() => {
+      el.classList.add('is-out');
+      setTimeout(() => {
+        index = (index + 1) % words.length;
+        el.textContent = words[index];
+        el.classList.remove('is-out');
+        el.classList.add('is-in-start');
+        void el.offsetWidth; // força reflow antes de tirar a transição
+        el.classList.remove('is-in-start');
+      }, 450);
+    }, 2200);
+  };
+
   const finish = () => {
     preloader.classList.add('is-done');
     body.classList.remove('no-scroll');
     body.classList.add('is-ready');
     setTimeout(() => preloader.remove(), 600);
+    startKickerRotator();
   };
 
   if (!preloader) return;
